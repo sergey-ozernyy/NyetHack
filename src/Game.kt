@@ -7,6 +7,8 @@ fun main (args: Array<String>){
     //Aura
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
 
+
+
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 
     //Состояние игрока
