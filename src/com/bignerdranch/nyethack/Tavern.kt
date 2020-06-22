@@ -1,4 +1,5 @@
-import kotlin.math.roundToInt
+package com.bignerdranch.nyethack
+
 import java.io.File
 
 
@@ -37,7 +38,7 @@ fun main(args: Array<String>) {
 }
 
 private fun displayPatronBalanse(){
-    patronGold.forEach{patron, balance ->
+    patronGold.forEach{ patron, balance ->
         println("$patron, balance: ${"%2f".format(balance)}")
     }
 }
@@ -48,7 +49,8 @@ fun performPurchase(price:Double, patronName: String){
         uniquePatrons.remove(patronName)
         patronGold.remove(patronName)
     }
-    else {patronGold[patronName] = totalPurche - price}
+    else {
+        patronGold[patronName] = totalPurche - price}
 
 }
 
