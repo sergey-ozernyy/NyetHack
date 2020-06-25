@@ -64,8 +64,7 @@ class Player(_name:String,
     fun selectHomeTown() = File("data/towns.txt")
             .readText()
             .split("\n")
-            .shuffled()
-            .first()
+            .random()
 
 }
 
