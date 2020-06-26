@@ -1,5 +1,5 @@
 package com.bignerdranch.nyethack
-
+import com.bignerdranch.nyethack.extensions.random as randomizer
 import java.io.File
 
 
@@ -18,8 +18,8 @@ val patronGold = mutableMapOf<String, Double>()
 fun main(args: Array<String>) {
 
     (0..9).forEach{
-        val first = patronList.random()
-        val last = lastName.random()
+        val first = patronList.randomizer()
+        val last = lastName.randomizer()
         val name = "$first $last"
         uniquePatrons += name
     }
@@ -30,8 +30,8 @@ fun main(args: Array<String>) {
 
     var orderCount = 0
     while (orderCount <= 9) {
-        placeOrder(uniquePatrons.random(),
-                menuList.random())
+        placeOrder(uniquePatrons.randomizer(),
+                menuList.randomizer())
         orderCount ++
     }
 
